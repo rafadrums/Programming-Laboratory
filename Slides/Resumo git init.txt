@@ -1,0 +1,8 @@
+echo "# nome-repositorio" >> README.md
+git init
+git add README.md  (nome da pasta)
+git commit -m "first commit" (mensagem)
+ 
+git remote add origin https://github.com/rafadrums/nome-repositorio.git
+
+git push -u origin master
