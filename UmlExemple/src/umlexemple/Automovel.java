@@ -9,7 +9,7 @@ package umlexemple;
  *
  * @author usuario
  */
-public class Automovel {
+public class Automovel implements Tipo {
 
     //Associacao entre instrutor/automovel
     protected Instrutor instrutor;
@@ -19,4 +19,16 @@ public class Automovel {
     protected String marca;
     protected String modelo;
     protected int ano;
+    
+    @Override
+    public int numPneus(){
+        return 1;
+    }
+    
+    @Override
+    public int numCavalos(){
+        return 1;
+    }
+    
+    
 }

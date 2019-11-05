@@ -9,13 +9,10 @@ package umlexemple;
  *
  * @author usuario
  */
-public class Pessoa {
+public interface Tipo {
     
-    protected String nome;
-    protected int idade;
-    protected String sexo ;
-    
-    
-    
+    //metodos abstratos
+    public int numPneus();
+    public int numCavalos();
     
 }
