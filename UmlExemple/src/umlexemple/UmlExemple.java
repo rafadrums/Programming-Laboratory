@@ -6,8 +6,12 @@ public class UmlExemple {
         // TODO code application logic here
 
 
+       Pessoa p1 = new Pessoa();
 
-
-    }
+       Instrutor i1 = new Instrutor();
+       
+       Carro c1 = new Carro();
     
+    
+}
 }

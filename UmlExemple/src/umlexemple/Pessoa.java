@@ -10,12 +10,84 @@ package umlexemple;
  * @author usuario
  */
 public class Pessoa {
-    
+
     protected String nome;
+    protected String ultimo_nome;
+    protected String cpf;
+    protected Endereco endereco;
     protected int idade;
-    protected String sexo ;
-    
-    
+    protected String sexo;
+
+    public Pessoa(String nome, String ultimo_nome, String cpf, Endereco endereco, int idade, String sexo) {
+        this.nome = nome;
+        this.ultimo_nome = ultimo_nome;
+        this.cpf = cpf;
+        this.endereco = endereco;
+        this.idade = idade;
+        this.sexo = sexo;
+    }
+
+    public Pessoa() {
+        /*
+       this.nome = "";
+        this.ultimo_nome = "";
+        this.cpf = "";
+        this.endereco = null;
+        this.idade = 0;
+        this.sexo = "";
+         */
+        this("", "", "", null, 0, "");
+
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getUltimo_nome() {
+        return ultimo_nome;
+    }
+
+    public void setUltimo_nome(String ultimo_nome) {
+        this.ultimo_nome = ultimo_nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
     
     
 }
