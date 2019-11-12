@@ -5,6 +5,8 @@
  */
 package umlexemple;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author usuario
@@ -17,6 +19,9 @@ public class Pessoa {
     protected Endereco endereco;
     protected int idade;
     protected String sexo;
+    
+    ArrayList<String> aluno = new ArrayList<String>();
+    ArrayList<String> instrutor = new ArrayList<String>();
 
     public Pessoa(String nome, String ultimo_nome, String cpf, Endereco endereco, int idade, String sexo) {
         this.nome = nome;
@@ -89,5 +94,11 @@ public class Pessoa {
     }
 
     
-    
+     public void inserirDados(String name, String last_name, String cpF, int age, String genero){
+        aluno.add("Nome: " + (this.nome = name));
+        aluno.add("Ultimo nome: " + (this.ultimo_nome = last_name));
+        aluno.add("CPF: " + (this.cpf = cpF));
+        aluno.add("Idade: " + age);
+     }
+   
 }

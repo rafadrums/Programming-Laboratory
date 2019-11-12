@@ -90,12 +90,7 @@ public class Automovel implements Tipo {
         this.ano = ano;
     }
 
-    //ADICIONAR
-    /*
-    public void addCarro(String car) {
-        carro.add(car);
-       }
-    */
+   
 
     public void addMoto(String bike) {
         moto.add(bike);

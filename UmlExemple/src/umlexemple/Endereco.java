@@ -5,11 +5,19 @@ public class Endereco {
     private String logradouro;
     private String cidade;
     private String estado;
+    private String cep;
 
-    public Endereco(String logradouro, String cidade, String estado) {
+    
+    
+    public Endereco(){
+        this("","","","");
+    }
+
+    public Endereco(String logradouro, String cidade, String estado, String cep) {
         this.logradouro = logradouro;
         this.cidade = cidade;
         this.estado = estado;
+        this.cep = cep;
     }
 
     public String getLogradouro() {
@@ -36,4 +44,19 @@ public class Endereco {
         this.estado = estado;
     }
 
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    
+    public void inserirEnd(String nomeRua, String city, String region, String ceP){
+     this.logradouro = nomeRua;
+        this.cidade = city;
+        this.estado = region;
+        this.cep = ceP;
+    }
 }

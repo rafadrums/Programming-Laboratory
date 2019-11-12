@@ -5,6 +5,8 @@
  */
 package umlexemple;
 
+import java.util.Scanner;
+
 /**
  *
  * @author usuario
@@ -42,69 +44,19 @@ public class Carro extends Automovel {
     public void setNumPortas(int numPortas) {
         this.numPortas = numPortas;
     }
-
-    @Override
-    public Instrutor getInstrutor() {
-        return instrutor;
-    }
-
-    @Override
-    public void setInstrutor(Instrutor instrutor) {
-        this.instrutor = instrutor;
-    }
-
-    @Override
-    public String getPlaca() {
-        return placa;
-    }
-
-    @Override
-    public void setPlaca(String placa) {
-        this.placa = placa;
-    }
-
-    @Override
-    public String getMarca() {
-        return marca;
-    }
-
-    @Override
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    @Override
-    public String getModelo() {
-        return modelo;
-    }
-
-    @Override
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    @Override
-    public int getAno() {
-        return ano;
-    }
-
-    @Override
-    public void setAno(int ano) {
-        this.ano = ano;
-    }
-
+    
     //METODOS DA COLLECTION ----------------------
     //LISTAR
     public void addCarro(String car) {
         carro.add(car);
     }
 
-    public void inserirDados(String marca, String modelo, String placa, int ano) {
+    public void inserirDados(String marca, String modelo, String placa, int ano, int portas) {
         carro.add("Marca: " + (this.marca = marca));
         carro.add("Modelo: " + (this.modelo = modelo));
         carro.add("PLaca: " + (this.placa = placa));
         carro.add("Ano: " + String.valueOf(this.ano = ano));
-
+        carro.add("N° portas: "+ String.valueOf(this.numPortas = portas));
     }
 
     public void listarCarro() {
@@ -112,5 +64,12 @@ public class Carro extends Automovel {
             System.out.println(carro.get(i));
         }
     }
+    
+    public void removerCarro(String rmv){
+        carro.remove(rmv);
+    }
+   
+    
+    
 
 }

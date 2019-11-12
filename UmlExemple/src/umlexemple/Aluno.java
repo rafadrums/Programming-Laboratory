@@ -25,7 +25,6 @@ public class Aluno extends Pessoa {
         super(nome, ultimo_nome, cpf, endereco, idade, sexo);
         this.tipoAutomovel = tipoAutomovel;
     }
-
     public Aluno(String tipoAutomovel) {
         this.tipoAutomovel = tipoAutomovel;
     }
@@ -38,45 +37,10 @@ public class Aluno extends Pessoa {
     public void setTipoAutomovel(String tipoAutomovel) {
         this.tipoAutomovel = tipoAutomovel;
     }
-@Override
-    public String getNome() {
-        return nome;
-    }
-@Override
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-@Override
-    public String getUltimo_nome() {
-        return ultimo_nome;
-    }
-@Override
-    public void setUltimo_nome(String ultimo_nome) {
-        this.ultimo_nome = ultimo_nome;
-    }
-@Override
-    public String getCpf() {
-        return cpf;
-    }
-@Override
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-@Override
-    public int getIdade() {
-        return idade;
-    }
-@Override
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-@Override
-    public String getSexo() {
-        return sexo;
-    }
-@Override
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
 
+    
+    public void inserirDados(String name, String last_name, String cpF, int age, String genero, String automovelTipo) {
+        super.inserirDados(name, last_name, cpF, age, genero);
+        aluno.add("Tipo de Automovel: " + (this.tipoAutomovel = automovelTipo));
+    }
 }
