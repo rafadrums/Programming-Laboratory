@@ -38,43 +38,43 @@ public class Aluno extends Pessoa {
     public void setTipoAutomovel(String tipoAutomovel) {
         this.tipoAutomovel = tipoAutomovel;
     }
-
+@Override
     public String getNome() {
         return nome;
     }
-
+@Override
     public void setNome(String nome) {
         this.nome = nome;
     }
-
+@Override
     public String getUltimo_nome() {
         return ultimo_nome;
     }
-
+@Override
     public void setUltimo_nome(String ultimo_nome) {
         this.ultimo_nome = ultimo_nome;
     }
-
+@Override
     public String getCpf() {
         return cpf;
     }
-
+@Override
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-
+@Override
     public int getIdade() {
         return idade;
     }
-
+@Override
     public void setIdade(int idade) {
         this.idade = idade;
     }
-
+@Override
     public String getSexo() {
         return sexo;
     }
-
+@Override
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }

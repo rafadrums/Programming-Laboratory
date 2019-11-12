@@ -5,6 +5,8 @@
  */
 package umlexemple;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author usuario
@@ -19,7 +21,10 @@ public class Automovel implements Tipo {
     protected String marca;
     protected String modelo;
     protected int ano;
-    
+    ArrayList<String> carro = new ArrayList<String>();
+    ArrayList<String> moto = new ArrayList<String>();
+    ArrayList<String> onibus = new ArrayList<String>();
+
     //Construtor
     public Automovel(String placa, String marca, String modelo, int ano) {
         this.placa = placa;
@@ -27,22 +32,23 @@ public class Automovel implements Tipo {
         this.modelo = modelo;
         this.ano = ano;
     }
-    
-    public Automovel(){
+
+    public Automovel() {
         this("", "", "", 0);
     }
     
+ 
     //Interface
     @Override
-    public int numPneus(){
+    public int numPneus() {
         return 1;
     }
-    
+
     @Override
-    public int numCavalos(){
+    public int numCavalos() {
         return 1;
     }
-    
+
     //Getters & Setters
     public Instrutor getInstrutor() {
         return instrutor;
@@ -83,7 +89,38 @@ public class Automovel implements Tipo {
     public void setAno(int ano) {
         this.ano = ano;
     }
+
+    //ADICIONAR
+    /*
+    public void addCarro(String car) {
+        carro.add(car);
+       }
+    */
+
+    public void addMoto(String bike) {
+        moto.add(bike);
+    }
+
+    public void addOnibus(String bus) {
+        onibus.add(bus);
+    }
+    
+    //METODOS DA COLLECTION ----------------------
+    
+    //LISTAR
+    public void listarMoto(){
+        for(int i=0; i < moto.size(); i++){
+            System.out.println(moto.get(i));
+        }
+    }    
+    //LISTAR
+    public void listarOnibus(){
+        for(int i=0; i < onibus.size(); i++){
+            System.out.println(onibus.get(i));
+        }
+    }
     
     
+
     
 }

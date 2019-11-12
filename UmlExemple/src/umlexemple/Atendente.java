@@ -10,14 +10,14 @@ package umlexemple;
  * @author usuario
  */
 public class Atendente extends Pessoa {
+
     /*
     protected String nome;
     protected String ultimo_nome;
     protected String cpf;
     protected int idade;
     protected String sexo ;
-    */
-    
+     */
     private double salario;
     private String turno;
 
@@ -31,11 +31,12 @@ public class Atendente extends Pessoa {
         this.salario = salario;
         this.turno = turno;
     }
-     public Atendente() {
+
+    public Atendente() {
         super("", "", "", null, 0, "");
         this.salario = 0.0;
         this.turno = "";
-     }
+    }
 
     public double getSalario() {
         return salario;
@@ -53,56 +54,64 @@ public class Atendente extends Pessoa {
         this.turno = turno;
     }
 
+    @Override
     public String getNome() {
         return nome;
     }
 
+    @Override
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    @Override
     public String getUltimo_nome() {
         return ultimo_nome;
     }
 
+    @Override
     public void setUltimo_nome(String ultimo_nome) {
         this.ultimo_nome = ultimo_nome;
     }
 
+    @Override
     public String getCpf() {
         return cpf;
     }
 
+    @Override
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
+    @Override
     public Endereco getEndereco() {
         return endereco;
     }
 
+    @Override
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
 
+    @Override
     public int getIdade() {
         return idade;
     }
 
+    @Override
     public void setIdade(int idade) {
         this.idade = idade;
     }
 
+    @Override
     public String getSexo() {
         return sexo;
     }
 
+    @Override
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
-     
-     
-     
-    
- 
+
 }
