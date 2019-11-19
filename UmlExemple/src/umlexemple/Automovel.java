@@ -99,11 +99,27 @@ public class Automovel implements Tipo {
     }
 
     //METODOS DA COLLECTION ----------------------
-    public void dadosCarro(String marca, String modelo, String placa, int ano, int portas) {
+    public void dadosCarro(String marca, String modelo, String placa, int ano) {
         carro.add("Marca: " + (this.marca = marca));
         carro.add("Modelo: " + (this.modelo = modelo));
         carro.add("PLaca: " + (this.placa = placa));
         carro.add("Ano: " + String.valueOf(this.ano = ano));
+    }
+
+    public void dadosMoto(String marca, String modelo, String placa, int ano) {
+        moto.add("Marca: " + (this.marca = marca));
+        moto.add("Modelo: " + (this.modelo = modelo));
+        moto.add("PLaca: " + (this.placa = placa));
+        moto.add("Ano: " + String.valueOf(this.ano = ano));
+
+    }
+    
+     public void dadosBus(String marca, String modelo, String placa, int ano) {
+        onibus.add("Marca: " + (this.marca = marca));
+        onibus.add("Modelo: " + (this.modelo = modelo));
+        onibus.add("PLaca: " + (this.placa = placa));
+        onibus.add("Ano: " + String.valueOf(this.ano = ano));
+
     }
 
     //---------------------- 

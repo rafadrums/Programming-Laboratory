@@ -102,13 +102,19 @@ public class Pessoa {
      }
    
      
-       public void dadosInstruor(String name, String last_name, String cpF, int age, String genero){
+       public void dadosInstrutor(String name, String last_name, String cpF, int age, String genero){
         instrutor.add("Nome: " + (this.nome = name));
         instrutor.add("Ultimo nome: " + (this.ultimo_nome = last_name));
         instrutor.add("CPF: " + (this.cpf = cpF));
         instrutor.add("Idade: " + String.valueOf(this.idade = age));
      }
      
+        public void listarInstrutor() {
+        for (int i = 0; i < instrutor.size(); i++) {
+            System.out.println(instrutor.get(i));
+        }
+        
+    }
      
    
 }

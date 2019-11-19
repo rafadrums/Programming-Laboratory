@@ -10,20 +10,18 @@ package umlexemple;
  * @author usuario
  */
 public class Onibus extends Automovel {
-    
+
     /*
     Atributos herdados
     protected String placa;
     protected String marca;
     protected String modelo;
     protected int ano;
-    */
-    
+     */
     private int numPAssageiros;
     private int numEmbratur;
-    
-    //Construtor
 
+    //Construtor
     public Onibus(int numPAssageiros, int numEmbratur, String placa, String marca, String modelo, int ano) {
         super(placa, marca, modelo, ano);
         this.numPAssageiros = numPAssageiros;
@@ -35,12 +33,11 @@ public class Onibus extends Automovel {
         this.numEmbratur = numEmbratur;
     }
 
-    public Onibus(){
-       super("", "", "", 0); 
-       this.numPAssageiros = 0;
-       this.numEmbratur = 0;
+    public Onibus() {
+        super("", "", "", 0);
+        this.numPAssageiros = 0;
+        this.numEmbratur = 0;
     }
- 
 
     public int getNumPAssageiros() {
         return numPAssageiros;
@@ -57,5 +54,11 @@ public class Onibus extends Automovel {
     public void setNumEmbratur(int numEmbratur) {
         this.numEmbratur = numEmbratur;
     }
-    
+
+    public void inserirDadosOnibus(String marca, String modelo, String placa, int ano, int numGente, int numEmbra) {
+        super.dadosBus(marca, modelo, placa, ano);
+        onibus.add("Numero de passageiros: " + String.valueOf(this.numPAssageiros = numGente));
+        onibus.add("Numero da Embratur: " + String.valueOf(this.numEmbratur = numEmbra));
+    }
+
 }

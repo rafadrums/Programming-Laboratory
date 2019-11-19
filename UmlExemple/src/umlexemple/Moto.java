@@ -33,5 +33,12 @@ public class Moto extends Automovel {
        super("", "", "", 0); 
        this.peso = 0.0;
     }
+
+
+    public void inserirDadosMoto(String marca, String modelo, String placa, int ano, double kg) {
+        super.dadosMoto(marca, modelo, placa, ano);
+        moto.add("Peso: "+ String.valueOf(this.peso = kg)+ "kg");
+    } 
+    
     
 }

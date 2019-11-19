@@ -100,20 +100,37 @@ public class Instrutor extends Pessoa {
     }
     
     public void inserirDadosInstrutor(String name, String last_name, String cpF, int age, String genero, String categoriaAula, double salary) {
-        super.dadosInstruor(name, last_name, cpF, age, genero);
+        super.dadosInstrutor(name, last_name, cpF, age, genero);
         instrutor.add("Categoria: " + (this.categoriaAulas = categoriaAula));
-        instrutor.add("Salário: R$" + String.valueOf(this.salario = salary));
-    
-        
+        instrutor.add("Salário: R$" + String.valueOf(this.salario = salary));   
     }
-     public void listarInstrutor() {
-        for (int i = 0; i < instrutor.size(); i++) {
-            System.out.println(instrutor.get(i));
-        }
+    
+    public void listarInstrutorCarro(){
+        this.listarInstrutor();
         System.out.println("Endereço: ");
         System.out.println(this.getEndereco().toString());
         System.out.println("Responsável Pelo Veículo: ");
         System.out.println(this.getAutomovel().carro);
+        System.out.println("Responsável Pelo Aluno: ");
+        System.out.println(this.getStudent().aluno);
+    }
+    
+    public void listarInstrutorMoto(){
+        this.listarInstrutor();
+        System.out.println("Endereço: ");
+        System.out.println(this.getEndereco().toString());
+        System.out.println("Responsável Pelo Veículo: ");
+        System.out.println(this.getAutomovel().moto);
+        System.out.println("Responsável Pelo Aluno: ");
+        System.out.println(this.getStudent().aluno);
+    }
+    
+     public void listarInstrutorOnibus(){
+        this.listarInstrutor();
+        System.out.println("Endereço: ");
+        System.out.println(this.getEndereco().toString());
+        System.out.println("Responsável Pelo Veículo: ");
+        System.out.println(this.getAutomovel().onibus);
         System.out.println("Responsável Pelo Aluno: ");
         System.out.println(this.getStudent().aluno);
     }

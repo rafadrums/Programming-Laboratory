@@ -52,7 +52,7 @@ public class Carro extends Automovel {
     }
 
     public void inserirDadosCarro(String marca, String modelo, String placa, int ano, int portas) {
-        super.dadosCarro(marca, modelo, placa, ano, portas);
+        super.dadosCarro(marca, modelo, placa, ano);
         carro.add("N° portas: "+ String.valueOf(this.numPortas = portas));
     }
 
