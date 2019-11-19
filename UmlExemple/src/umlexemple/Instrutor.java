@@ -5,27 +5,54 @@
  */
 package umlexemple;
 
+import java.util.logging.Logger;
+
 /**
  *
  * @author usuario
  */
 public class Instrutor extends Pessoa {
-    
-      /*
-   protected String nome;
-    protected String ultimo_nome;
-    protected String cpf;
-    protected int idade;
-    protected String sexo ;
-    */ 
-    //Associacao entre instrutor/automovel
-    
-    private String categoriaAulas;
-    private Automovel automovel;
-    private double salario;
-    
-    //contrutor
 
+    private String categoriaAulas;
+    private double salario;
+
+    //Associacao entre instrutor/automovel   
+    private Automovel automovel;
+    
+    //-----------------------------
+    //-----------------------------
+    
+    //atributo tipo Automovel
+    protected Automovel vehicle;
+    
+    public Instrutor(Automovel vehicle) {
+        this.vehicle = vehicle;
+    }
+
+    public Automovel getVehicle() {
+        return vehicle;
+    }
+
+    public void setVehicle(Automovel vehicle) {
+        this.vehicle = vehicle;
+    }
+    
+   //Atributo tipo Aluno -----------------
+   protected Aluno student;
+
+    public Instrutor(Aluno student) {
+        this.student = student;
+    }
+
+    public Aluno getStudent() {
+        return student;
+    }
+
+    public void setStudent(Aluno student) {
+        this.student = student;
+    }
+    
+    //contrutor (classe) ------------------
     public Instrutor(String categoriaAulas, Automovel automovel, double salario, String nome, String ultimo_nome, String cpf, Endereco endereco, int idade, String sexo) {
         super(nome, ultimo_nome, cpf, endereco, idade, sexo);
         this.categoriaAulas = categoriaAulas;
@@ -72,6 +99,23 @@ public class Instrutor extends Pessoa {
         this.salario = salario;
     }
     
+    public void inserirDadosInstrutor(String name, String last_name, String cpF, int age, String genero, String categoriaAula, double salary) {
+        super.dadosInstruor(name, last_name, cpF, age, genero);
+        instrutor.add("Categoria: " + (this.categoriaAulas = categoriaAula));
+        instrutor.add("Salário: R$" + String.valueOf(this.salario = salary));
     
+        
+    }
+     public void listarInstrutor() {
+        for (int i = 0; i < instrutor.size(); i++) {
+            System.out.println(instrutor.get(i));
+        }
+        System.out.println("Endereço: ");
+        System.out.println(this.getEndereco().toString());
+        System.out.println("Responsável Pelo Veículo: ");
+        System.out.println(this.getAutomovel().carro);
+        System.out.println("Responsável Pelo Aluno: ");
+        System.out.println(this.getStudent().aluno);
+    }
     
 }

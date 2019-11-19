@@ -94,11 +94,21 @@ public class Pessoa {
     }
 
     
-     public void inserirDados(String name, String last_name, String cpF, int age, String genero){
+     public void dadosAluno(String name, String last_name, String cpF, int age, String genero){
         aluno.add("Nome: " + (this.nome = name));
         aluno.add("Ultimo nome: " + (this.ultimo_nome = last_name));
         aluno.add("CPF: " + (this.cpf = cpF));
-        aluno.add("Idade: " + age);
+        aluno.add("Idade: " + String.valueOf(this.idade = age));
      }
+   
+     
+       public void dadosInstruor(String name, String last_name, String cpF, int age, String genero){
+        instrutor.add("Nome: " + (this.nome = name));
+        instrutor.add("Ultimo nome: " + (this.ultimo_nome = last_name));
+        instrutor.add("CPF: " + (this.cpf = cpF));
+        instrutor.add("Idade: " + String.valueOf(this.idade = age));
+     }
+     
+     
    
 }

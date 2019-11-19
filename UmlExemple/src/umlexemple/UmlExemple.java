@@ -6,30 +6,40 @@ public class UmlExemple {
 
     public static void main(String[] args) {
         // TODO code application logic here
-
-        Vector <Pessoa> vetAluno = new Vector();
-     
-        //Carros
+      
+        //CONJUNTO1 -------------------------------
+        //.
+        //Veículo
+        //.
         Carro carro1 = new Carro();
-        Carro carro2 = new Carro();
         
+        carro1.inserirDadosCarro("VW", "Gol", "IGM-1544", 2019, 4);
+        //.
+        //Aluno
+        //
+        Aluno aluno1 = new Aluno();
+        Endereco endAluno1 = new Endereco();
         
-        carro1.inserirDados("VW","Gol","IGM-1544",2019, 4);
-        carro2.inserirDados("Chevrolet", "Onix", "IXC-5462", 2019, 4);
-        carro1.listarCarro();
-        System.out.println("");
-       // carro2.listarCarro();
+        aluno1.inserirDadosAluno("Rafael ", "Bueno", "000.000.000-00", 20, "M", "Carro");
+        endAluno1.inserirEnd("Bento Dias", "Camaqua", "RS", "101010-010");
+        
+        aluno1.setEndereco(endAluno1);
 
-       //Instrutor
-       Instrutor teach1 = new Instrutor();
-       Instrutor teach2 = new Instrutor();
+        //
+        //Intrutor
+        //.
+        Instrutor teach1 = new Instrutor();
+        Endereco endTeach1 = new Endereco();
+        
+        teach1.inserirDadosInstrutor("José", "Almeida", "000.000.000-00", 27, "Masculino", "B", 1320.05); 
+        endTeach1.inserirEnd("Sete de Setembro", "Camaqua", "RS", "10101-010"); 
+        
+        teach1.setEndereco(endTeach1);
+        teach1.setAutomovel(carro1);
+        teach1.setStudent(aluno1);
+        teach1.listarInstrutor();
+        
        
-       //Aluno
-       Aluno aluno1 = new Aluno();
-       Endereco endAluno1 = new Endereco("Bento Dias", "Camaqua", "RS", "000000-000");
-       aluno1.inserirDados("Rafael ", "Bueno", "000.000.000-00", 20, "M", "Carro");
-       aluno1.setEndereco(endAluno1);
 
-       
     }
 }

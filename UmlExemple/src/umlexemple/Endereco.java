@@ -59,4 +59,11 @@ public class Endereco {
         this.estado = region;
         this.cep = ceP;
     }
+    
+    public String toString(){
+        return("Rua: " + this.getLogradouro() + "// Cidade: " + this.getCidade() 
+                + "// Estado: " + this.getEstado() + "// CEP: " + this.getCep());
+    }
+    
+    
 }

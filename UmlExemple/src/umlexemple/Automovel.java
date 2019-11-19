@@ -13,14 +13,15 @@ import java.util.ArrayList;
  */
 public class Automovel implements Tipo {
 
-    //Associacao entre instrutor/automovel
-    protected Instrutor instrutor;
-
     //Atributos (todo)
     protected String placa;
     protected String marca;
     protected String modelo;
     protected int ano;
+
+//Associacao entre instrutor/automovel
+    protected Instrutor instrutor;
+
     ArrayList<String> carro = new ArrayList<String>();
     ArrayList<String> moto = new ArrayList<String>();
     ArrayList<String> onibus = new ArrayList<String>();
@@ -36,8 +37,7 @@ public class Automovel implements Tipo {
     public Automovel() {
         this("", "", "", 0);
     }
-    
- 
+
     //Interface
     @Override
     public int numPneus() {
@@ -90,8 +90,6 @@ public class Automovel implements Tipo {
         this.ano = ano;
     }
 
-   
-
     public void addMoto(String bike) {
         moto.add(bike);
     }
@@ -99,23 +97,28 @@ public class Automovel implements Tipo {
     public void addOnibus(String bus) {
         onibus.add(bus);
     }
-    
+
     //METODOS DA COLLECTION ----------------------
-    
+    public void dadosCarro(String marca, String modelo, String placa, int ano, int portas) {
+        carro.add("Marca: " + (this.marca = marca));
+        carro.add("Modelo: " + (this.modelo = modelo));
+        carro.add("PLaca: " + (this.placa = placa));
+        carro.add("Ano: " + String.valueOf(this.ano = ano));
+    }
+
+    //---------------------- 
     //LISTAR
-    public void listarMoto(){
-        for(int i=0; i < moto.size(); i++){
+    public void listarMoto() {
+        for (int i = 0; i < moto.size(); i++) {
             System.out.println(moto.get(i));
         }
-    }    
+    }
+
     //LISTAR
-    public void listarOnibus(){
-        for(int i=0; i < onibus.size(); i++){
+    public void listarOnibus() {
+        for (int i = 0; i < onibus.size(); i++) {
             System.out.println(onibus.get(i));
         }
     }
-    
-    
 
-    
 }

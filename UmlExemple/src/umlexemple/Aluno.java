@@ -39,8 +39,17 @@ public class Aluno extends Pessoa {
     }
 
     
-    public void inserirDados(String name, String last_name, String cpF, int age, String genero, String automovelTipo) {
-        super.inserirDados(name, last_name, cpF, age, genero);
+    public void inserirDadosAluno(String name, String last_name, String cpF, int age, String genero, String automovelTipo) {
+        super.dadosAluno(name, last_name, cpF, age, genero);
         aluno.add("Tipo de Automovel: " + (this.tipoAutomovel = automovelTipo));
     }
+    
+    public void listarAluno() {
+        for (int i = 0; i < aluno.size(); i++) {
+            System.out.println(aluno.get(i));
+        }
+        System.out.println("Endereço: ");
+        System.out.println(this.getEndereco().toString());
+    }
+    
 }

@@ -51,25 +51,14 @@ public class Carro extends Automovel {
         carro.add(car);
     }
 
-    public void inserirDados(String marca, String modelo, String placa, int ano, int portas) {
-        carro.add("Marca: " + (this.marca = marca));
-        carro.add("Modelo: " + (this.modelo = modelo));
-        carro.add("PLaca: " + (this.placa = placa));
-        carro.add("Ano: " + String.valueOf(this.ano = ano));
+    public void inserirDadosCarro(String marca, String modelo, String placa, int ano, int portas) {
+        super.dadosCarro(marca, modelo, placa, ano, portas);
         carro.add("N° portas: "+ String.valueOf(this.numPortas = portas));
     }
 
-    public void listarCarro() {
+     public void listarCarro() {
         for (int i = 0; i < carro.size(); i++) {
             System.out.println(carro.get(i));
         }
     }
-    
-    public void removerCarro(String rmv){
-        carro.remove(rmv);
-    }
-   
-    
-    
-
 }
